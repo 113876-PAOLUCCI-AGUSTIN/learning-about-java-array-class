@@ -4,7 +4,7 @@
  * its length is fixed.
  * Each item in an array is called an element, and each element is accessed by its numerical index.
  * Numbering begins with 0.
- * Source: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html
+ * SOURCE: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html
  */
 
 import java.util.Arrays;
@@ -102,7 +102,7 @@ public class Main {
         for (int i = 0; i < myFiveLuckyNumbers.length; i++) {
             myFiveLuckyNumbers[i] = (int)(Math.random()*100);
         }
-        // ACCESING WITH FOREACH LOOP.
+        // ACCESSING WITH FOREACH LOOP.
         for (Integer numb : myFiveLuckyNumbers) {
             System.out.print(numb + " ");
         }
