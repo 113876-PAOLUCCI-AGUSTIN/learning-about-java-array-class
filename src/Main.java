@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.Collections;
-
 /**
  * An array is a container object that holds a fixed number of values of a single type.
  * The length of an array is established when the array is created. After creation,
@@ -9,6 +6,9 @@ import java.util.Collections;
  * Numbering begins with 0.
  * Source: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html
  */
+
+import java.util.Arrays;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -30,13 +30,25 @@ public class Main {
         theRollingStones[4] = "Brian Jones";   //4 - INDEX:3
         // IMPORTANT: Length : 5 from indexes 0 to 4.
 
+        System.out.println("The Rolling Stones are...");
+        for (String cantoRodado : theRollingStones) {
+            System.out.println(cantoRodado);
+        }
+        System.out.println("The first element of the array: " + theRollingStones[0]);
+        System.out.println("The last element of the array: " + (theRollingStones[4]));
+
         // DECLARING ARRAY LITERAL.
         String[] theBeatles = { "John","Paul","George","Ringo" };
+        System.out.println("\nand The Beatles are...");
+        for (int i = 0; i < theBeatles.length; i++) {
+            String theBeatle = theBeatles[i];
+            System.out.println(theBeatle);
+        }
 
         // OTHER EXAMPLE.
         Integer[] myNumbs = {65, -1, 3, 316, 50};
         // CHANGING VALUE TO A SPECIFIC INDEX:
-        myNumbs[0] = 32;
+        myNumbs[3] = 32;
         myNumbs[2] = 5;
 
         // ACCESSING JAVA ARRAY ELEMENTS USING FOREACH LOOP. IA shortcut: iter
@@ -65,33 +77,33 @@ public class Main {
             System.out.print(i + " ");
         }
 
-        System.out.println("\n---- ARRAYS.SORT() + COLLECTIONS.REVERSEORDER() ----");
+        System.out.println("\n---- ARRAYS.SORT() + COLLECTIONS.REVERSE ORDER() ----");
         Arrays.sort(myNumbs, Collections.reverseOrder());
         for (Integer i : myNumbs) {
             System.out.print(i + " ");
         }
 
         System.out.println("\n---- PRACTICE:  ----");
-        // CREANDO UN ARRAY DE TAMAÑO 10 NUMEROS INTEGER.
-        Integer[] myRamdomNumbs = new Integer[5];
+        // CREATING A 5 INTEGER NUMBERS ARRAY.
+        Integer[] myFiveLuckyNumbers = new Integer[5]; // Every element is null.
 
-        for (int i = 0  ; i < myRamdomNumbs.length; i++) {
-            System.out.print(myRamdomNumbs[i] + " ");
+        for (int i = 0  ; i < myFiveLuckyNumbers.length; i++) {
+            System.out.print(myFiveLuckyNumbers[i] + " ");
         }
         System.out.println("\n---- ARRAYS.FILL() ----");
-        // USANDO FILL PARA CARGAR TODAS LAS POSICIONES CON UN NUMERO INT.
-        Arrays.fill(myRamdomNumbs,0);
-        // RECORRIDO
-        for (Integer num : myRamdomNumbs) {
+        // FILING ALL ELEMENTS WITH ZERO IN THIS EXAMPLE.
+        Arrays.fill(myFiveLuckyNumbers,0); // VALUE
+        // ACCESSING
+        for (Integer num : myFiveLuckyNumbers) {
             System.out.print(num + " ");
         }
 
-        System.out.println("\n---- FILLING WITH RAMDOM NUMBERS:  ----");
-        for (int i = 0; i < myRamdomNumbs.length; i++) {
-            myRamdomNumbs[i] = (int)(Math.random()*100);
+        System.out.println("\n---- FILLING WITH RANDOM NUMBERS:  ----");
+        for (int i = 0; i < myFiveLuckyNumbers.length; i++) {
+            myFiveLuckyNumbers[i] = (int)(Math.random()*100);
         }
-        // RECORRIDO.
-        for (Integer numb : myRamdomNumbs) {
+        // ACCESING WITH FOREACH LOOP.
+        for (Integer numb : myFiveLuckyNumbers) {
             System.out.print(numb + " ");
         }
     }
