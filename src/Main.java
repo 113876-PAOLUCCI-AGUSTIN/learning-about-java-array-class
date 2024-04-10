@@ -78,5 +78,21 @@ public class Main {
         for (int i = 0  ; i < myRamdomNumbs.length; i++) {
             System.out.print(myRamdomNumbs[i] + " ");
         }
+        System.out.println("\n---- ARRAYS.FILL() ----");
+        // USANDO FILL PARA CARGAR TODAS LAS POSICIONES CON UN NUMERO INT.
+        Arrays.fill(myRamdomNumbs,0);
+        // RECORRIDO
+        for (Integer num : myRamdomNumbs) {
+            System.out.print(num + " ");
+        }
+
+        System.out.println("\n---- FILLING WITH RAMDOM NUMBERS:  ----");
+        for (int i = 0; i < myRamdomNumbs.length; i++) {
+            myRamdomNumbs[i] = (int)(Math.random()*100);
+        }
+        // RECORRIDO.
+        for (Integer numb : myRamdomNumbs) {
+            System.out.print(numb + " ");
+        }
     }
 }
