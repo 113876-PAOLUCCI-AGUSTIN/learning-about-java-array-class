@@ -31,8 +31,29 @@ public class Main {
         String[] theBeatles = { "John","Paul","George","Ringo" };
 
         // OTHER EXAMPLE.
-        Integer[] myNumbersArray = {65, -1, 3, 316, 50};
-        myNumbersArray[0] = 32;
-        myNumbersArray[2] = 5;
+        Integer[] myNumbs = {65, -1, 3, 316, 50};
+        // CHANGING VALUE TO A SPECIFIC INDEX:
+        myNumbs[0] = 32;
+        myNumbs[2] = 5;
+
+        // ACCESSING JAVA ARRAY ELEMENTS USING FOREACH LOOP. IA shortcut: iter
+        System.out.println("\n---- ACCESSING WITH FOREACH LOOP ----");
+        for (Integer i : myNumbs) {
+            System.out.print(i + " ");
+        }
+
+        // ACCESSING JAVA ARRAY ELEMENTS USING FOR LOOP.
+        // IA shortcut: itar
+        System.out.println("\n---- ACCESSING WITH FOR LOOP ----");
+        for (int i = 0; i < myNumbs.length; i++) {
+            System.out.print(myNumbs[i] + " ");
+        }
+
+        // RECORRIDO CON FOR EN REVERSO.
+        // IA shortcut: ritar
+        System.out.println("\n---- ACCESSING IN REVERSE ORDER WITH FOR LOOP ----");
+        for (int i = myNumbs.length - 1; i >= 0; i--) {
+            System.out.print(myNumbs[i] + " ");
+        }
     }
 }
