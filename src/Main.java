@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Collections;
+
 /**
  * An array is a container object that holds a fixed number of values of a single type.
  * The length of an array is established when the array is created. After creation,
@@ -49,11 +52,31 @@ public class Main {
             System.out.print(myNumbs[i] + " ");
         }
 
-        // RECORRIDO CON FOR EN REVERSO.
+        // ACCESSING JAVA ARRAY ELEMENTS IN REVERSE MODE.
         // IA shortcut: ritar
         System.out.println("\n---- ACCESSING IN REVERSE ORDER WITH FOR LOOP ----");
         for (int i = myNumbs.length - 1; i >= 0; i--) {
             System.out.print(myNumbs[i] + " ");
+        }
+
+        System.out.println("\n---- ARRAYS.SORT() ----");
+        Arrays.sort(myNumbs);
+        for (Integer i : myNumbs) {
+            System.out.print(i + " ");
+        }
+
+        System.out.println("\n---- ARRAYS.SORT() + COLLECTIONS.REVERSEORDER() ----");
+        Arrays.sort(myNumbs, Collections.reverseOrder());
+        for (Integer i : myNumbs) {
+            System.out.print(i + " ");
+        }
+
+        System.out.println("\n---- PRACTICE:  ----");
+        // CREANDO UN ARRAY DE TAMAÑO 10 NUMEROS INTEGER.
+        Integer[] myRamdomNumbs = new Integer[5];
+
+        for (int i = 0  ; i < myRamdomNumbs.length; i++) {
+            System.out.print(myRamdomNumbs[i] + " ");
         }
     }
 }
