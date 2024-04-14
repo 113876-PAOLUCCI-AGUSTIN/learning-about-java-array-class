@@ -9,6 +9,7 @@
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -106,5 +107,122 @@ public class Main {
         for (Integer numb : myFiveLuckyNumbers) {
             System.out.print(numb + " ");
         }
+
+        //
+        // CREATING AND INITIALIZING AN ARRAY.
+        Integer[] myFirstArray = new Integer[25];
+
+
+        // CREATING AN INSTANCE OF THE ARRAY.
+        Integer[] mySecondArray = {2, 4, 7, 98, 32, 77, 81, 62, 45, 71}; //
+
+        // To get the length of the array, we use the length property
+        System.out.println(mySecondArray.length);
+
+        // FIRST: INDEX 0.
+        Integer firstElement = mySecondArray[0];
+        System.out.println(firstElement);
+
+        // LAST: LENGTH - 1.
+        Integer lastElement = mySecondArray[mySecondArray.length - 1];
+        System.out.println(lastElement);
+
+        mySecondArray[1] = null;
+        mySecondArray[8] = null;
+
+        // ACCESSING ELEMENTS.
+        for (int i = 0; i < mySecondArray.length; i++) {
+            System.out.print(mySecondArray[i] + " ");
+        }
+
+        Integer[] myThirdArray = new Integer[10];
+
+        // FILLING WITH i.
+        for (int i = 0; i < myThirdArray.length; i++) {
+            myThirdArray[i] = i;
+        }
+
+        // ACCESSING WITH FOR LOOP.
+        System.out.println("\nACCESSING WITH FOR LOOP");
+        for (int i = 0; i < myThirdArray.length; i++) {
+            System.out.print(myThirdArray[i] + " ");
+        }
+
+        // ACCESSING WITH FOR EACH LOOP
+        System.out.println("\nACCESSING WITH FOR EACH LOOP");
+        for (Integer i : myThirdArray) {
+            System.out.print(myThirdArray[i] + " ");
+        }
+
+        System.out.println("---- BOOK EXERCISE 1 Page 241 ----");
+        int[] sample = {2, 4, 7, 98, 32, 77, 81, 62, 45, 71};
+        Scanner input = new Scanner(System.in);
+        System.out.println("\nEnter the number you want to find: ");
+        int electedNumber = input.nextInt();
+        for (int i = 0; i < sample.length; i++) {
+            if (sample[i] == (electedNumber)) {
+                System.out.println("Match found at element: " + i);
+                break;
+            } else {
+                System.out.println("Match not found");
+            }
+        }
+
+        // Finding the Smallest Number in an Array.
+        Integer[] mySecondSample = {14, 28, 15, 89, 46, 25, 94, 33, 82, 11, 37, 59, 68,
+                27, 16, 45, 24, 33, 72, 51};
+
+        int sm = mySecondSample[0];
+        for (int i = 0; i < mySecondSample.length; i++) {
+            if (mySecondSample[i] < sm) {
+                sm = mySecondSample[i];
+            }
+        }
+        System.out.println(sm);
+
+        // SORTING AN ARRAY.
+        System.out.println("\nASC");
+        Arrays.sort(mySecondSample);
+        for (Integer i : mySecondSample) {
+            System.out.print(i + " ");
+        }
+
+        // SORTING AN ARRAY.
+        System.out.println("\nDSC...Reverse mode....");
+        Arrays.sort(mySecondSample, Collections.reverseOrder());
+        for (int i = 0; i < mySecondSample.length; i++) {
+            System.out.print(mySecondSample[i] + " ");
+        }
+
+        // COPYING AN ARRAY.
+        Integer[] myRRA = Arrays.copyOf(mySecondSample, 9);
+
+        for (int i = 0; i < myRRA.length; i++) {
+            System.out.println(" | " + myRRA[i]);
+        }
+        // FILLING AN ARRAY
+        Arrays.fill(mySecondSample,0);
+
+        System.out.println(mySecondSample.length);
+        for (Integer i : mySecondSample) {
+            System.out.print(i+ " - ");
+        }
+
+        System.out.println("\n---- MULTIDIMENSIONAL ARRAYS [ROW] [COLUMN] ----");
+        int[][] myDoMulti = {{ 1,2,3},{4,5,6},{7,8,9}};
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(myDoMulti[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println(Arrays.toString(myDoMulti));
+
+        int[] intArray = { 1, 2, 3 };
+
+        int[] cloneArray = intArray.clone();
+
     }
 }
